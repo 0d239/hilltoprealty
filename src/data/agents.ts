@@ -19,7 +19,7 @@ export const agents: Agent[] = [
     phone: '(408) 804-1511',
     email: 'EstradaSold@MyHillTopRealty.com',
     image: 'https://global.acceleragent.com/usr/13705421761/1161817043.jpg',
-    bio: 'Henry Estrada is your Hollister CA Real Estate Specialist, bringing expert knowledge and valuable experience blended with the latest technology to serve both buyers and sellers in the San Benito County area. With deep roots in the community and a commitment to personalized service, Henry has helped countless families find their perfect home.',
+    bio: 'Henry Estrada is your Hollister CA Real Estate Specialist, bringing expert knowledge and 30+ years of field experience to serve both buyers and sellers in the San Benito County area. With deep roots and commitment to the community, Henry has helped countless families find their perfect home.',
     specialties: [
       'Residential Sales',
       'First-Time Homebuyers',

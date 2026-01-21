@@ -21,14 +21,14 @@ export function Resources() {
       <section className="container-narrow">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Resources</h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Helpful information and guides for buyers and sellers navigating the real estate process.
           </p>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex bg-slate-800 rounded-lg p-1">
+          <div className="inline-flex bg-neutral-800 rounded-lg p-1">
             <TabButton
               active={activeTab === 'buyers'}
               onClick={() => setActiveTab('buyers')}
@@ -60,12 +60,12 @@ export function Resources() {
               <Card>
                 <CardHeader>
                   <h2 className="text-xl font-semibold text-white">Buyer Resources</h2>
-                  <p className="text-sm text-slate-400 mt-1">
+                  <p className="text-sm text-neutral-400 mt-1">
                     Everything you need to know about buying a home in San Benito County
                   </p>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <div className="divide-y divide-slate-700">
+                  <div className="divide-y divide-neutral-700">
                     {buyerResources.map((resource) => (
                       <ResourceItem key={resource.title} resource={resource} />
                     ))}
@@ -95,12 +95,12 @@ export function Resources() {
               <Card>
                 <CardHeader>
                   <h2 className="text-xl font-semibold text-white">Seller Resources</h2>
-                  <p className="text-sm text-slate-400 mt-1">
+                  <p className="text-sm text-neutral-400 mt-1">
                     Tools and services to help you sell your home for top dollar
                   </p>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <div className="divide-y divide-slate-700">
+                  <div className="divide-y divide-neutral-700">
                     {sellerResources.map((resource) => (
                       <ResourceItem key={resource.title} resource={resource} />
                     ))}
@@ -129,7 +129,7 @@ export function Resources() {
             <Card>
               <CardHeader>
                 <h2 className="text-xl font-semibold text-white">Frequently Asked Questions</h2>
-                <p className="text-sm text-slate-400 mt-1">
+                <p className="text-sm text-neutral-400 mt-1">
                   General questions about working with Hilltop Realty
                 </p>
               </CardHeader>
@@ -167,8 +167,8 @@ function TabButton({
       className={cn(
         'flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors',
         active
-          ? 'bg-slate-700 text-white shadow-sm'
-          : 'text-slate-400 hover:text-white'
+          ? 'bg-neutral-700 text-white shadow-sm'
+          : 'text-neutral-400 hover:text-white'
       )}
     >
       {icon}
@@ -179,15 +179,15 @@ function TabButton({
 
 function ResourceItem({ resource }: { resource: { title: string; description: string; url?: string } }) {
   const content = (
-    <div className="flex items-center justify-between px-6 py-4 hover:bg-slate-700 transition-colors">
+    <div className="flex items-center justify-between px-6 py-4 hover:bg-neutral-700 transition-colors">
       <div>
         <h3 className="font-medium text-white">{resource.title}</h3>
-        <p className="text-sm text-slate-400 mt-0.5">{resource.description}</p>
+        <p className="text-sm text-neutral-400 mt-0.5">{resource.description}</p>
       </div>
       {resource.url ? (
-        <ExternalLink className="w-4 h-4 text-slate-500" />
+        <ExternalLink className="w-4 h-4 text-neutral-500" />
       ) : (
-        <ChevronRight className="w-4 h-4 text-slate-500" />
+        <ChevronRight className="w-4 h-4 text-neutral-500" />
       )}
     </div>
   );

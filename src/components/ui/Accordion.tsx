@@ -12,15 +12,15 @@ export function AccordionItem({ title, children, defaultOpen = false }: Accordio
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-b border-slate-700 last:border-b-0">
+    <div className="border-b border-neutral-700 last:border-b-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full py-4 text-left font-medium text-slate-100 hover:text-primary-400 transition-colors"
+        className="flex items-center justify-between w-full py-4 text-left font-medium text-neutral-100 hover:text-primary-400 transition-colors"
       >
         <span>{title}</span>
         <ChevronDown
           className={cn(
-            'w-5 h-5 text-slate-400 transition-transform duration-200',
+            'w-5 h-5 text-neutral-400 transition-transform duration-200',
             isOpen && 'rotate-180'
           )}
         />
@@ -31,7 +31,7 @@ export function AccordionItem({ title, children, defaultOpen = false }: Accordio
           isOpen ? 'max-h-96 pb-4' : 'max-h-0'
         )}
       >
-        <div className="text-slate-400 text-sm leading-relaxed">{children}</div>
+        <div className="text-neutral-400 text-sm leading-relaxed">{children}</div>
       </div>
     </div>
   );
@@ -43,5 +43,5 @@ interface AccordionProps {
 }
 
 export function Accordion({ children, className }: AccordionProps) {
-  return <div className={cn('divide-y divide-slate-700', className)}>{children}</div>;
+  return <div className={cn('divide-y divide-neutral-700', className)}>{children}</div>;
 }

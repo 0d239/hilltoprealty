@@ -6,17 +6,18 @@
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
 
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
-  --color-primary-950: #082f49;
+  /* Yellow/Gold accent palette based on Hilltop Realty branding */
+  --color-primary-50: #FFFBEB;
+  --color-primary-100: #FEF3C7;
+  --color-primary-200: #FDE68A;
+  --color-primary-300: #FCD34D;
+  --color-primary-400: #FBBF24;
+  --color-primary-500: #E9A319;
+  --color-primary-600: #D97706;
+  --color-primary-700: #B45309;
+  --color-primary-800: #92400E;
+  --color-primary-900: #78350F;
+  --color-primary-950: #451A03;
 }
 
 @layer base {
@@ -25,7 +26,7 @@
   }
 
   body {
-    @apply antialiased text-slate-200 bg-slate-900;
+    @apply antialiased text-neutral-200 bg-black;
     font-family: var(--font-sans);
   }
 }

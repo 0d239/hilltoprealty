@@ -13,9 +13,8 @@ export function About() {
         <h1 className="text-4xl font-bold text-white mb-4">
           Welcome to {companyInfo.name}
         </h1>
-        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-          Expert knowledge and valuable experience blended with the latest technology
-          to help you achieve your real estate goals.
+        <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+          Expert knowledge and 30+ years helping you achieve your real estate goals.
         </p>
       </section>
 
@@ -37,7 +36,7 @@ export function About() {
                     <div>
                       <h2 className="text-2xl font-bold text-white">{agent.name}</h2>
                       <p className="text-primary-400 font-medium">{agent.title}</p>
-                      <p className="text-sm text-slate-400 mt-1">{agent.license}</p>
+                      <p className="text-sm text-neutral-400 mt-1">{agent.license}</p>
                     </div>
                     <div className="flex gap-2">
                       <a href={`tel:${agent.phone}`}>
@@ -55,7 +54,7 @@ export function About() {
                     </div>
                   </div>
 
-                  <p className="text-slate-400 mb-6 leading-relaxed">{agent.bio}</p>
+                  <p className="text-neutral-400 mb-6 leading-relaxed">{agent.bio}</p>
 
                   <div>
                     <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
@@ -84,7 +83,7 @@ export function About() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-xl font-bold text-white mb-4">Our Office</h2>
-                <div className="space-y-4 text-slate-400">
+                <div className="space-y-4 text-neutral-400">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary-400 mt-0.5" />
                     <div>
@@ -110,7 +109,7 @@ export function About() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-white mb-4">Why Choose Us</h2>
-                <ul className="space-y-3 text-slate-400">
+                <ul className="space-y-3 text-neutral-400">
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2"></span>
                     <span>Deep local expertise in Hollister and San Benito County</span>

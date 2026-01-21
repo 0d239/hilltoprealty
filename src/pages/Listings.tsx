@@ -13,7 +13,7 @@ export function Listings() {
       <section className="container-wide">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Our Listings</h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Explore our current properties in Hollister and the surrounding San Benito County area.
           </p>
         </div>
@@ -24,7 +24,7 @@ export function Listings() {
             <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
               <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
               Active Listings
-              <span className="text-sm font-normal text-slate-400">({activeListings.length})</span>
+              <span className="text-sm font-normal text-neutral-400">({activeListings.length})</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {activeListings.map((listing) => (
@@ -40,7 +40,7 @@ export function Listings() {
             <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
               <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
               Pending
-              <span className="text-sm font-normal text-slate-400">({pendingListings.length})</span>
+              <span className="text-sm font-normal text-neutral-400">({pendingListings.length})</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pendingListings.map((listing) => (
@@ -54,9 +54,9 @@ export function Listings() {
         {soldListings.length > 0 && (
           <div>
             <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
-              <span className="w-2 h-2 bg-slate-400 rounded-full"></span>
+              <span className="w-2 h-2 bg-neutral-400 rounded-full"></span>
               Recently Sold
-              <span className="text-sm font-normal text-slate-400">({soldListings.length})</span>
+              <span className="text-sm font-normal text-neutral-400">({soldListings.length})</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {soldListings.map((listing) => (
@@ -91,42 +91,42 @@ function ListingCard({ listing }: { listing: typeof listings[0] }) {
           </Badge>
         </div>
         <div className="absolute bottom-3 left-3">
-          <span className="bg-slate-900/80 text-white px-3 py-1.5 rounded-lg text-lg font-bold">
+          <span className="bg-neutral-900/80 text-white px-3 py-1.5 rounded-lg text-lg font-bold">
             {formatPrice(listing.price)}
           </span>
         </div>
       </div>
       <div className="p-4">
         <h3 className="font-semibold text-white mb-1">{listing.address}</h3>
-        <div className="flex items-center gap-1 text-sm text-slate-400 mb-3">
+        <div className="flex items-center gap-1 text-sm text-neutral-400 mb-3">
           <MapPin className="w-3.5 h-3.5" />
           <span>{listing.city}, {listing.state} {listing.zip}</span>
         </div>
-        <div className="flex items-center gap-4 text-sm text-slate-300">
+        <div className="flex items-center gap-4 text-sm text-neutral-300">
           <div className="flex items-center gap-1.5">
-            <Bed className="w-4 h-4 text-slate-500" />
+            <Bed className="w-4 h-4 text-neutral-500" />
             <span>{listing.bedrooms} bed</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Bath className="w-4 h-4 text-slate-500" />
+            <Bath className="w-4 h-4 text-neutral-500" />
             <span>{listing.bathrooms} bath</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Square className="w-4 h-4 text-slate-500" />
+            <Square className="w-4 h-4 text-neutral-500" />
             <span>{listing.sqft.toLocaleString()} sqft</span>
           </div>
         </div>
-        <div className="mt-3 pt-3 border-t border-slate-700">
-          <p className="text-sm text-slate-400 line-clamp-2">{listing.description}</p>
+        <div className="mt-3 pt-3 border-t border-neutral-700">
+          <p className="text-sm text-neutral-400 line-clamp-2">{listing.description}</p>
         </div>
         <div className="mt-3 flex flex-wrap gap-1.5">
           {listing.features.slice(0, 3).map((feature) => (
-            <span key={feature} className="text-xs bg-slate-700 text-slate-300 px-2 py-1 rounded">
+            <span key={feature} className="text-xs bg-neutral-700 text-neutral-300 px-2 py-1 rounded">
               {feature}
             </span>
           ))}
           {listing.features.length > 3 && (
-            <span className="text-xs text-slate-400 px-2 py-1">
+            <span className="text-xs text-neutral-400 px-2 py-1">
               +{listing.features.length - 3} more
             </span>
           )}
